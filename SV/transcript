@@ -1,0 +1,25 @@
+# do DT.do
+# Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
+# Start time: 16:04:34 on Apr 03,2024
+# vlog datapath.sv Data_tb.sv 
+# -- Compiling module datapath
+# -- Compiling module evolve3
+# -- Compiling module evolve5
+# -- Compiling module evolve8
+# -- Compiling module rules
+# 
+# Top level modules:
+# 	datapath
+# End time: 16:04:34 on Apr 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:04:34 on Apr 03,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: (vopt-13130) Failed to find design unit stimulus.
+#         Searched libraries:
+#             work
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 16:04:35 on Apr 03,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
