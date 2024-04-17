@@ -9,15 +9,16 @@ module stimulus;
    logic a;
    logic [63:0]Grid_Evolved;
    assign Grid = 64'h0412_6424_0034_3C28;
+   assign lf= 8'b00110010;
+   logic [7:0]lf_out;
     //Grid, clk, reset, a, Grid_Evolved
-   /*
+   
    integer 	 handle3;
    integer 	 desc3;
    integer 	 i;  
    integer       j;
     
-   DES dut (key, plaintext, encrypt, ciphertext);
-*/
+
    // 1 ns clock
    initial 
      begin	
@@ -27,46 +28,50 @@ module stimulus;
 
     data dut(Grid,clk,reset,a,Grid_Evolved);
 //Grid, clk, reset, a, Grid_Evolved
-/*
+
    initial
      begin
-	handle3 = $fopen("des.out");
-	$readmemh("des.tv", testvectors);	
-	vectornum = 0;
-	errors = 0;		
+	handle3 = $fopen("Game.out");
 	desc3 = handle3;
      end
 
-   // apply test vectors on rising edge of clk
-   always @(posedge clk)
-     begin
-	#1; {plaintext, op, key, result} = testvectors[vectornum];
-	#0 encrypt = op[0];		  
-     end  
 
-   // check results on falling edge of clk
-  always @(negedge clk)
-    begin
-       if (result != ciphertext)
-	 begin
-	    errors = errors + 1;
-	 end
-       $fdisplay(desc3, "%h %h %b || %h || %h %b", 
-		 plaintext, key, encrypt, ciphertext, result, (result == ciphertext));
-       vectornum = vectornum + 1;
-       if (testvectors[vectornum] === 200'bx) 
-	 begin 
-	    $display("%d tests completed with %d errors", 
-		     vectornum, errors);
-	    $finish;
-	 end
+/*
+	 Grid_Evolved[0:7];
+       Grid_Evolved[8:15];
+       Grid_Evolved[16:23];
+       Grid_Evolved[24:31];
+       Grid_Evolved[32:39];
+       Grid_Evolved[40:47];
+       Grid_Evolved[48:55];
+  
+       Grid_Evolved[56:63];
+       */
+         always @(negedge  clk)
+       begin
+
+       $fdisplay(desc3, " %b\n %b\n %b\n %b\n %b\n %b\n %b\n %b\n" ,  Grid_Evolved[7:0], Grid_Evolved[15:8],
+       Grid_Evolved[23:16],
+       Grid_Evolved[31:24],
+       Grid_Evolved[39:32],
+       Grid_Evolved[47:40],
+       Grid_Evolved[55:48],
+       Grid_Evolved[63:56]);
+	
+
+
+
+      
     end
-*/
+
 
    initial 
-     begin      	
+     begin   
+      		#0   reset = 1'b1;
+
 	#0   a = 1'b0;
-    #30   a = 1'b1;
+   #15   reset = 1'b0;
+    #15  a = 1'b1;
 
 
 

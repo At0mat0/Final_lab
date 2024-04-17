@@ -46,13 +46,16 @@ input logic clk;
 input logic reset;
 input logic a;
 output logic [63:0]Grid_Evolved;
+logic [63:0]comb;
+logic [63:0]comb_evol;
+input logic [7:0]lf;
+output logic [7:0]lf_out;
 
-
-mux2 dut(Grid,Grid_Evolved,active,comb);
+mux3 dut(Grid,Grid_Evolved,active,comb);
 datapath dut1(comb, comb_evol);
 flop dut2(clk, comb_evol, Grid_Evolved);
 fsm dut3(clk,reset, a ,active);
-
+Lsf dut4(a,lf,lf_out);
 
 
 

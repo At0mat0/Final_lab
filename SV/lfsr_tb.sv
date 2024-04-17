@@ -1,11 +1,29 @@
 // testbench to prove maximal LFSR
 module tb ();
 
+     logic 	 clk;
+   logic reset;
+   logic [7:0]lf;
+   assign lf= 8'b00110010;
+   logic [7:0]lf_out;
    //logic variables to route input and output to DUT
-
-   //create file handles to write results to a file
    
+
+
+   integer 	 handle3;
+   integer 	 desc3;
+   integer 	 i;  
+   integer       j;
+
+    initial
+     begin
+	handle3 = $fopen("lsf.out");
+	desc3 = handle3;
+     end
+//module lfsr(seed, clk, reset, shift_seed);
+
    // instantiate device under test (small LFSR)
+  lfsr dut(lf,clk,reset,lf_out);
 
    //set up a clock signal
    always     
@@ -16,7 +34,9 @@ module tb ();
    initial
      begin
 	//set up output file
+        $fdisplay(desc3, "  ");
 	//set up any book keeping variables you may want to use
+   $fdisplay(desc3, " %b\n " ,lf_out[7:0]);
 	//set up a starting seed.  What happens with all 0s?
 	//reset your DUT
 	//save the initial output of your DUT to compare with current output
