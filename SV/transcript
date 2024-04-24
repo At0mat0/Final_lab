@@ -11,9 +11,55 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# do lfsr_tb.sv
-# ** Error: invalid command name "//"
-# Error in macro ./lfsr_tb.sv line 1
-# invalid command name "//"
-#     while executing
-# "// testbench to prove maximal LFSR"
+# do Data.do
+# Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
+# Start time: 16:41:26 on Apr 24,2024
+# vlog -reportprogress 300 Data.sv Data_tb.sv mux.sv fsm.sv flop.sv datapath.sv lfsr.sv lfsr_tb.sv 
+# -- Compiling module data
+# -- Compiling module stimulus
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module mux4
+# -- Compiling module mux5
+# -- Compiling module mux6
+# -- Compiling module mux16
+# -- Compiling module fsm
+# -- Compiling module flop
+# -- Compiling module datapath
+# -- Compiling module evolve3
+# -- Compiling module evolve5
+# -- Compiling module evolve8
+# -- Compiling module rules
+# -- Compiling module lfsr
+# -- Compiling module lfsr64
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	stimulus
+# 	mux2
+# 	mux4
+# 	mux5
+# 	mux6
+# 	mux16
+# 	tb
+# End time: 16:41:26 on Apr 24,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.stimulus 
+# Start time: 16:41:26 on Apr 24,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "fsm(fast)".
+# Loading sv_std.std
+# Loading work.stimulus(fast)
+# Loading work.data(fast)
+# Loading work.lfsr64(fast)
+# Loading work.mux3(fast)
+# Loading work.datapath(fast)
+# Loading work.evolve3(fast)
+# Loading work.rules(fast)
+# Loading work.evolve5(fast)
+# Loading work.evolve8(fast)
+# Loading work.flop(fast)
+# Loading work.fsm(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# End time: 16:41:49 on Apr 24,2024, Elapsed time: 0:00:23
+# Errors: 0, Warnings: 0

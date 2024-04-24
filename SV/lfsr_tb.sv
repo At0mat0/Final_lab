@@ -14,7 +14,7 @@ module tb ();
    integer 	 desc3;
    integer 	 i;  
    integer       j;
-
+     integer test;
     initial
      begin
 	handle3 = $fopen("lsf.out");
@@ -33,10 +33,10 @@ module tb ();
    
    initial
      begin
+       
 	//set up output file
-        $fdisplay(desc3, "  ");
 	//set up any book keeping variables you may want to use
-   $fdisplay(desc3, " %b\n " ,lf_out[7:0]);
+
 	//set up a starting seed.  What happens with all 0s?
 	//reset your DUT
 	//save the initial output of your DUT to compare with current output
@@ -45,7 +45,13 @@ module tb ();
 
    always @(posedge clk)
      begin
-		//output your results to a file
+               if(lf_out==lf)
+     begin
+          test=1;
+          end
+          
+   $fdisplay(desc3, " %b\n %d\n " ,lf_out[7:0], test);
+     test=0;
      end
 
    // check results on falling edge of clk
@@ -57,6 +63,16 @@ module tb ();
 		//if the output never repeats for 2^n iterations, report that
 		end
 	end
+initial 
+     begin   
+      		#0   reset = 1'b1;
+
+   #10   reset = 1'b0;
+
+
+
+     end
+
    
 endmodule // tb
 

@@ -6,11 +6,9 @@ module stimulus;
    logic 	 clk;
    logic [63:0]Grid;
    logic reset;
-   logic a;
+   logic [1:0]a;
    logic [63:0]Grid_Evolved;
    assign Grid = 64'h0412_6424_0034_3C28;
-   assign lf= 8'b00110010;
-   logic [7:0]lf_out;
     //Grid, clk, reset, a, Grid_Evolved
    
    integer 	 handle3;
@@ -71,7 +69,7 @@ module stimulus;
 
 	#0   a = 1'b0;
    #15   reset = 1'b0;
-    #15  a = 1'b1;
+    #15  a = 2'b10;
 
 
 

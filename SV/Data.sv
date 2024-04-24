@@ -44,19 +44,36 @@ module data(Grid, clk, reset, a, Grid_Evolved);
 input logic [63:0]Grid;
 input logic clk;
 input logic reset;
-input logic a;
+input logic [1:0]a;
 output logic [63:0]Grid_Evolved;
 logic [63:0]comb;
 logic [63:0]comb_evol;
-input logic [7:0]lf;
-output logic [7:0]lf_out;
+logic [63:0]lfsr_Grid;
+logic [1:0]active;
+/*
 
-mux3 dut(Grid,Grid_Evolved,active,comb);
+
+module mux4 #(parameter WIDTH = 8) (
+  input  logic [WIDTH-1:0] d0, d1, d2, d3,
+  input  logic [1:0]       s, 
+  output logic [WIDTH-1:0] y);
+
+  assign y = s[1] ? (s[0] ? d3 : d2) : (s[0] ? d1 : d0); 
+endmodule
+*/
+lfsr64 dut4(Grid,clk,reset,lfsr_Grid);
+mux3 dut(Grid,Grid_Evolved,lfsr_Grid,active,comb);
 datapath dut1(comb, comb_evol);
 flop dut2(clk, comb_evol, Grid_Evolved);
 fsm dut3(clk,reset, a ,active);
-Lsf dut4(a,lf,lf_out);
 
+/*
+
+
+module flopen #(parameter WIDTH = 8) (
+
+*/
+//module lfsr64 (seed, clk, reset, shift_seed);
 
 
 endmodule

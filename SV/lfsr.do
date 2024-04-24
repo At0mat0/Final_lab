@@ -23,23 +23,14 @@ if [file exists work] {
 }
 vlib work
 # compile source files
-vlog Data.sv Data_tb.sv mux.sv fsm.sv flop.sv datapath.sv lfsr.sv lfsr_tb.sv
+vlog lfsr.sv lfsr_tb.sv
 # start and run simulation
-vsim -voptargs=+acc work.stimulus
+vsim -voptargs=+acc work.tb
 view wave
 -- display input and output signals as hexidecimal values
 # Diplays All Signals recursively
-#add wave -hex -r /stimulus/*
-add wave -noupdate -divider -height 32 "Data"
-add wave -hex /stimulus/dut/*
-add wave -noupdate -divider -height 32 "mux"
-add wave -hex /stimulus/dut/dut/*
-add wave -noupdate -divider -height 32 "datapath"
-add wave -hex /stimulus/dut/dut1/*
-add wave -noupdate -divider -height 32 "flop"
-add wave -hex /stimulus/dut/dut2/*
-add wave -noupdate -divider -height 32 "fsm"
-add wave -hex /stimulus/dut/dut3/*
+#add wave -hex -r /tb/*
+
 
 
 -- Set Wave Output Items 

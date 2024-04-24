@@ -1,15 +1,15 @@
 module lfsr(seed, clk, reset, shift_seed);
 input logic [7:0]seed;
-logic clk;
+input logic clk;
 input logic reset;
 output logic [7:0]shift_seed;
 
-typedef enum 	logic [9:0] {S0, S1} statetype;
+typedef enum 	logic [7:0] {S0, S1} statetype;
    statetype state, nextstate;
    
    always_ff @(posedge clk, posedge reset)begin
      if (reset)  shift_seed <= seed;
-     else       shift_seed <= {shift_seed[6:0],shift_seed[8]~^shift_seed[6]~^shift_seed[5]~^shift_seed[4]};
+     else       shift_seed <= {shift_seed[6:0],shift_seed[7]~^shift_seed[5]~^shift_seed[4]~^shift_seed[3]};
    end
    
 
@@ -28,10 +28,21 @@ input  logic             clk, reset,
 endmodule
 
 module lfsr64 (seed, clk, reset, shift_seed);
-//inputs and outputs for the full seed size (64 bits)
+input logic [63:0]seed;
+input logic clk;
+input logic reset;
+output logic [63:0]shift_seed;
 
-//either build a 64 bit version using your smaller implementation above
-//or use the same methods from the xilinx document to build a full
-//64 bit version
+typedef enum 	logic [63:0] {S0, S1} statetype;
+   statetype state, nextstate;
+   
+   always_ff @(posedge clk, posedge reset)begin
+     if (reset)  shift_seed <= seed;
+     
+     else
+     
+        shift_seed <= {shift_seed[62:0],shift_seed[63]~^shift_seed[62]~^shift_seed[60]~^shift_seed[59]};
+   end
+   
 
 endmodule

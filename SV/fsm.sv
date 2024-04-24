@@ -1,9 +1,9 @@
 module fsm(clk, reset, a, active);
 input logic clk;
 input logic reset;
-input logic a;
-output logic active;
-typedef enum 	logic [1:0] {S0,S1} statetype;
+input logic [1:0]a;
+output logic [1:0]active;
+typedef enum 	logic [1:0] {S0,S1,S2} statetype;
    statetype state, nextstate;
 
    always_ff @(posedge clk, posedge reset)
@@ -12,19 +12,28 @@ typedef enum 	logic [1:0] {S0,S1} statetype;
   always_comb
      case (state)
        S0: begin
-        if(a)begin
-        nextstate<=S1;
+           if(a==10)begin
+          nextstate<=S2;
+        end
 
+        if(a==01)begin
+        nextstate<=S1;
         end 
+     
         else begin
-        active<='b0;
+        active<='b00;
         nextstate<=S0;
         end
     end
         S1:begin
-            active<='b1;
+            active<='b01;
             nextstate<=S0;
         end
+      S2:begin
+
+        active<='b10;
+          nextstate<=S0;
+      end
      endcase
 
 
