@@ -6,6 +6,9 @@ module tb ();
    logic [7:0]lf;
    assign lf= 8'b00110010;
    logic [7:0]lf_out;
+   logic [63:0]lf1;
+     assign lf1 = 64'h0412_6424_0034_3C28;
+   logic [63:0]lf1_out;
    //logic variables to route input and output to DUT
    
 
@@ -17,14 +20,14 @@ module tb ();
      integer test;
     initial
      begin
-	handle3 = $fopen("lsf.out");
+	handle3 = $fopen("lsf64.out");
 	desc3 = handle3;
      end
 //module lfsr(seed, clk, reset, shift_seed);
 
    // instantiate device under test (small LFSR)
   lfsr dut(lf,clk,reset,lf_out);
-
+  lfsr64 dut1(lf1,clk,reset,lf1_out);
    //set up a clock signal
    always     
      begin
@@ -50,7 +53,7 @@ module tb ();
           test=1;
           end
           
-   $fdisplay(desc3, " %b\n %d\n " ,lf_out[7:0], test);
+   $fdisplay(desc3, " %b\n %d\n " ,lf_out1[63:0], test);
      test=0;
      end
 

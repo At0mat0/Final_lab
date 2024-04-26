@@ -68,6 +68,9 @@ flop dut2(clk, comb_evol, Grid_Evolved);
 fsm dut3(clk,reset, a ,active);
 
 /*
+1	1	d2 LFSR
+0	1	d1 Grid_Ev
+0	0	d0 Grid
 
 
 module flopen #(parameter WIDTH = 8) (

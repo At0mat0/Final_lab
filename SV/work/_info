@@ -11,10 +11,10 @@ z2
 cModel Technology
 Z0 dC:/Users/evanc/OneDrive/Documents/GitHub/Final_lab/SV
 T_opt
-!s110 1713994887
-VVSgWFi34bN9ca=>^H8FYB2
+!s110 1714143797
+V8F^l`aaZbMK5UQ?n:e>QZ3
 04 8 4 work stimulus fast 0
-=1-7404f1eb7e68-66297c86-398-3a40
+=1-7404f1eb7e68-662bc234-3cb-2184
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
 Z1 tCvgOpt 0
@@ -22,25 +22,25 @@ n@_opt
 OL;O;2021.3;73
 vdata
 Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z3 !s110 1713994886
+Z3 !s110 1714143796
 !i10b 1
-!s100 DhW15HOfVSJS[KGfPdo>A2
-I07ELOY]bI=>h@CL^B?mMj1
+!s100 :DgHn2?LH@_SJVX=l@mS_0
+IeHi^P8g2PJ0eo_3_olnjY0
 S1
 R0
-w1713994849
+w1714140631
 8Data.sv
 FData.sv
 !i122 0
-L0 43 37
+L0 43 40
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 Z5 OL;L;2021.3;73
 r1
 !s85 0
 31
-Z6 !s108 1713994886.000000
+Z6 !s108 1714143796.000000
 Z7 !s107 lfsr_tb.sv|lfsr.sv|datapath.sv|flop.sv|fsm.sv|mux.sv|Data_tb.sv|Data.sv|
-Z8 !s90 -reportprogress|300|Data.sv|Data_tb.sv|mux.sv|fsm.sv|flop.sv|datapath.sv|lfsr.sv|lfsr_tb.sv|
+Z8 !s90 Data.sv|Data_tb.sv|mux.sv|fsm.sv|flop.sv|datapath.sv|lfsr.sv|lfsr_tb.sv|
 !i113 0
 Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
@@ -168,15 +168,15 @@ vfsm
 R2
 R3
 !i10b 1
-!s100 BJaSN4i?ZNf0h;_hVmWfk1
-IoXSO;C[cNlaBBPK1>4LV33
+!s100 P@RWhke^Fe?SK_mO2N:c30
+I4VfPKkkHT89Q@Wn`Q^VQW2
 S1
 R0
-w1713994870
+w1714142152
 8fsm.sv
 Ffsm.sv
 !i122 0
-L0 1 40
+L0 1 52
 R4
 R5
 r1
@@ -196,7 +196,7 @@ R3
 IcZegRa^HbhiE5U61Ukm=Q1
 S1
 R0
-Z13 w1713994807
+Z13 w1713994936
 Z14 8lfsr.sv
 Z15 Flfsr.sv
 !i122 0
@@ -408,15 +408,15 @@ vstimulus
 R2
 R3
 !i10b 1
-!s100 CQSYS<gmmJK4DNS:_;W>72
-IQ6N3IX6[7mnM^?iOd;?=:1
+!s100 RDng^c7TcGcd<IeB4g;1^0
+I:;RFLCjZ3C0A2b0DgVVIL2
 S1
 R0
-w1713994755
+w1714143793
 8Data_tb.sv
 FData_tb.sv
 !i122 0
-L0 2 79
+L0 2 90
 R4
 R5
 r1
@@ -432,15 +432,15 @@ vtb
 R2
 R3
 !i10b 1
-!s100 TflOcXddDA1jaD;1i7IH=3
-I?@lUYXi_6`nN7<ekj1nQ61
+!s100 X2aoBdPKhD^<iXQ><6Hmb2
+I6XiRSU^40<fb>BGAil9zE0
 S1
 R0
-w1713990872
+w1714106831
 8lfsr_tb.sv
 Flfsr_tb.sv
 !i122 0
-L0 2 76
+L0 2 79
 R4
 R5
 r1
