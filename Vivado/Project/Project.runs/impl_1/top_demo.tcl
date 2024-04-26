@@ -278,6 +278,9 @@ OPTRACE "route_design reports" START { REPORT }
   create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file top_demo_incremental_reuse_routed.rpt"
   create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file top_demo_clock_utilization_routed.rpt"
   create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file top_demo_bus_skew_routed.rpt -pb top_demo_bus_skew_routed.pb -rpx top_demo_bus_skew_routed.rpx"
+  create_report "impl_1_route_report_timing_0" "report_timing -file route_report_timing_0.rpt -rpx route_report_timing_0.rpx"
+  create_report "impl_1_route_report_utilization_0" "report_utilization -file route_report_utilization_0.rpt -pb route_report_utilization_0.pb"
+  create_report "impl_1_route_report_power_1" "report_power -file top_demo_power_routed_1.rpt -pb top_demo_power_summary_routed_1.pb -rpx top_demo_power_routed_1.rpx"
 OPTRACE "route_design reports" END { }
 OPTRACE "route_design misc" START { }
   close_msg_db -file route_design.pb
