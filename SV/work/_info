@@ -11,10 +11,10 @@ z2
 cModel Technology
 Z0 dC:/Users/evanc/OneDrive/Documents/GitHub/Final_lab/SV
 T_opt
-!s110 1714143797
-V8F^l`aaZbMK5UQ?n:e>QZ3
+!s110 1714404446
+VV;TO<70N4Qb6nDILaOUdL3
 04 8 4 work stimulus fast 0
-=1-7404f1eb7e68-662bc234-3cb-2184
+=1-7404f1eb7e68-662fbc5d-367-261c
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work +acc
 Z1 tCvgOpt 0
@@ -22,7 +22,7 @@ n@_opt
 OL;O;2021.3;73
 vdata
 Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z3 !s110 1714143796
+Z3 !s110 1714404445
 !i10b 1
 !s100 :DgHn2?LH@_SJVX=l@mS_0
 IeHi^P8g2PJ0eo_3_olnjY0
@@ -38,7 +38,7 @@ Z5 OL;L;2021.3;73
 r1
 !s85 0
 31
-Z6 !s108 1714143796.000000
+Z6 !s108 1714404445.000000
 Z7 !s107 lfsr_tb.sv|lfsr.sv|datapath.sv|flop.sv|fsm.sv|mux.sv|Data_tb.sv|Data.sv|
 Z8 !s90 Data.sv|Data_tb.sv|mux.sv|fsm.sv|flop.sv|datapath.sv|lfsr.sv|lfsr_tb.sv|
 !i113 0
@@ -168,15 +168,15 @@ vfsm
 R2
 R3
 !i10b 1
-!s100 P@RWhke^Fe?SK_mO2N:c30
-I4VfPKkkHT89Q@Wn`Q^VQW2
+!s100 1XQGB0fiJ]1;3:RAATo543
+IYlW1DYeWo`Bz5?@a3C4<_2
 S1
 R0
-w1714142152
+w1714404439
 8fsm.sv
 Ffsm.sv
 !i122 0
-L0 1 52
+L0 1 57
 R4
 R5
 r1
@@ -412,7 +412,7 @@ R3
 I:;RFLCjZ3C0A2b0DgVVIL2
 S1
 R0
-w1714143793
+w1714143824
 8Data_tb.sv
 FData_tb.sv
 !i122 0

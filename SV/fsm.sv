@@ -3,12 +3,12 @@ input logic clk;
 input logic reset;
 input logic [1:0]a;
 output logic [1:0]active;
-typedef enum 	logic [1:0] {S0,S1,S2} statetype;
+typedef enum 	logic [1:0] {S0,S1,S2,S3} statetype;
    statetype state, nextstate;
 
    always_ff @(posedge clk, posedge reset)
-     if (reset) state <= S0;
-     else       state <= nextstate;
+     if (reset) state <= S3;
+    else       state <= nextstate;
   always_comb
      case (state)
        S0: begin
@@ -46,6 +46,11 @@ typedef enum 	logic [1:0] {S0,S1,S2} statetype;
         else
           nextstate<=S0;
       end
+      S3:begin
+           active<=2'b00;
+        nextstate<=S0;
+      end
+  
      endcase
 
 
