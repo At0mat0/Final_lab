@@ -69,11 +69,12 @@ assign Grid = 64'h0412_6424_0034_3C28;
 
    initial 
      begin   
-#5  a = 2'b00;
 #0   reset = 1'b1;
 #4  reset = 1'b0;
-#11  a = 2'b01;
-#20  a = 2'b11;
+#11  a = 2'b11;
+#20  a = 2'b01;
+#25   reset = 1'b1;
+#35 reset = 1'b0;
 
 
 /*

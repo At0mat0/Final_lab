@@ -52,6 +52,4 @@ typedef enum 	logic [1:0] {S0,S1,S2,S3} statetype;
       end
   
      endcase
-
-
 endmodule

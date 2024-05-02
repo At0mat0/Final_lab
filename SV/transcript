@@ -1,6 +1,6 @@
 # do Data.do
 # Model Technology ModelSim SE-64 vlog 2021.3 Compiler 2021.07 Jul 13 2021
-# Start time: 10:27:25 on Apr 29,2024
+# Start time: 13:27:27 on Apr 30,2024
 # vlog Data.sv Data_tb.sv mux.sv fsm.sv flop.sv datapath.sv lfsr.sv lfsr_tb.sv 
 # -- Compiling module data
 # -- Compiling module stimulus
@@ -29,10 +29,10 @@
 # 	mux6
 # 	mux16
 # 	tb
-# End time: 10:27:25 on Apr 29,2024, Elapsed time: 0:00:00
+# End time: 13:27:27 on Apr 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs="+acc" work.stimulus 
-# Start time: 10:27:25 on Apr 29,2024
+# Start time: 13:27:27 on Apr 30,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "fsm(fast)".
 # //  ModelSim SE-64 2021.3 Jul 13 2021
@@ -68,5 +68,5 @@
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
 # configure wave not supported in batch mode
-# End time: 10:27:29 on Apr 29,2024, Elapsed time: 0:00:04
+# End time: 13:27:29 on Apr 30,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
